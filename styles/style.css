@@ -1,0 +1,1596 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Homepage CSS */
+
+.socialbar {
+    height: 30px;
+    background-color: rgb(59, 115, 255);
+    display: flex;
+    justify-content: end;
+}
+
+.icon-div {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.icon-div>span {
+    margin: 0px 10px;
+}
+
+.icon-div>span>a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    height: 120px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
+
+.nav-info {
+    width: 100%;
+    height: 90px;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-kelurahan {
+    display: flex;
+    align-items: center;
+}
+
+.logo-kelurahan>img {
+    width: 40px;
+}
+
+.text-logo {
+    margin-left: 16px;
+}
+
+.text-logo>p {
+    line-height: 1.25rem;
+}
+
+.text-logo>.nama-kelurahan {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.info-kontak>ul {
+    list-style-type: none;
+}
+
+.info-kontak>ul>li {
+    line-height: 1rem;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.info-kontak>ul>.notelp {
+    margin-top: 6px;
+}
+
+
+.info-kontak>ul>li>.info-desc {
+    margin-left: 8px;
+}
+
+.navigator {
+    height: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.navigator>ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: 90px;
+}
+
+.navigator>ul>a {
+    margin: 0px 10px;
+}
+
+.navigator>ul>a {
+    text-decoration: none;
+    color: grey;
+}
+
+.navigator>ul>a:hover {
+    text-decoration: underline;
+}
+
+.navigator>ul>a>li>i {
+    font-size: 10px;
+    vertical-align: middle;
+    padding-left: 3px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    display: none;
+    visibility: hidden;
+}
+
+.dropdown-menu.active {
+    display: flex;
+    visibility: visible;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    padding: 8px 16px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ddd;
+}
+
+.profil-dropdown-menu {
+    top: 160px;
+    left: 320px;
+}
+
+.info-dropdown-menu {
+    top: 160px;
+    left: 410px;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 80%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination>.swiper-pagination-bullet {
+    width: 18px;
+    height: 18px;
+    background-color: white;
+}
+
+.swiper-pagination>.swiper-pagination-bullet-active {
+    background-color: rgb(59, 115, 255);
+}
+
+.layanan-warga {
+    width: 100%;
+    background-color: rgb(35, 25, 95);
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10%;
+}
+
+.layanan-warga>img {
+    height: 30vh;
+    width: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.layanan-desc {
+    margin-left: 40px;
+    width: 45%;
+    color: white;
+}
+
+.layanan-desc>p {
+    margin-top: 20px;
+    font-weight: 500;
+    line-height: 1.35rem;
+}
+
+.layanan-desc>button {
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    border: 0;
+    background-color: rgb(59, 115, 255);
+}
+
+.layanan-desc>button:hover {
+    background-color: rgb(95, 140, 222);
+    cursor: pointer;
+}
+
+.layanan-desc>button>a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.berita-terkini {
+    width: 100%;
+    padding: 32px 100px 48px 100px;
+}
+
+.berita-header>h1 {
+    font-size: 32px;
+}
+
+.berita-subheader {
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.berita-subheader>p {
+    font-style: italic;
+}
+
+.berita-subheader>a {
+    text-decoration: none;
+}
+
+.berita-subheader>a:hover {
+    text-decoration: underline;
+}
+
+.card-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 24px;
+}
+
+.card {
+    width: 420px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.card-image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 20px 25px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text>p {
+    color: gray;
+    line-height: 1.25rem;
+}
+
+.card-text>p,
+.card-text>h1 {
+    margin-bottom: 5px;
+}
+
+.card-subbody {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-subbody>p {
+    color: rgb(171, 171, 171);
+}
+
+.card-subbody>a {
+    text-decoration: none;
+}
+
+.card-subbody>a>i {
+    vertical-align: middle;
+}
+
+.card-subbody>a:hover {
+    text-decoration: underline;
+}
+
+.profil-kelurahan {
+    width: 100%;
+    background-color: rgb(222, 222, 222);
+}
+
+.profil-title {
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+.profil-info {
+    font-size: 18px;
+    color: rgb(89, 89, 89);
+}
+
+.profil-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.profil-container {
+    width: 100%;
+    height: 100%;
+    padding: 40px 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.profilcard-container {
+    padding: 10px 20px;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 16px;
+    box-sizing: border-box;
+    align-content: start;
+}
+
+.profil-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.profil-card:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+.card-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-items>img {
+    width: 100px;
+}
+
+.card-items>p {
+    margin: 10px 0px;
+    font-weight: 600;
+}
+
+.peraturan-container {
+    padding-bottom: 10px;
+    margin-top: 10px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pdf-container {
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 10px;
+}
+
+.pdf-container>h2 {
+    padding: 15px 0px 15px 20px;
+    border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+.pdf-container>a {
+    line-height: 40px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.pdf-container>a:hover {
+    text-decoration: underline;
+}
+
+.pdf-link {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+.pdf-link:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+.pdf-link>p {
+    color: black;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.pdf-link>img {
+    width: 36px;
+    margin-right: 10px;
+}
+
+.others {
+    width: 100%;
+    background-color: rgb(35, 25, 95);
+    display: flex;
+    justify-content: center;
+}
+
+.image-gallery {
+    width: 40%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-gallery>h1 {
+    width: 100%;
+    color: white;
+    text-align: start;
+    margin-bottom: 24px;
+    font-size: 30px;
+}
+
+.mySwiper2 {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.swiper-slide2 {
+    text-align: center;
+    font-size: 18px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.subtitles {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: start;
+    padding: 20px 20px 40px 20px;
+    font-size: 14px;
+}
+
+.swiper-pagination2>.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+}
+
+.swiper-pagination2>.swiper-pagination-bullet-active {
+    background-color: rgb(59, 115, 255);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: white;
+}
+
+.link-terkait {
+    width: 40%;
+    padding: 36px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.link-terkait>h1 {
+    width: 80%;
+    color: white;
+    text-align: start;
+    margin-bottom: 24px;
+    font-size: 30px;
+}
+
+.links-container {
+    width: 80%;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.links {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.links>i {
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.links>a {
+    padding-left: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.links>a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    width: 100%;
+    height: 50vh;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/206/185/227/city-cityscape-reflection-night-wallpaper-preview.jpg);
+    background-position: 50% 70%;
+    position: relative;
+    display: flex;
+}
+
+.subfoot1,
+.subfoot2,
+.subfoot3 {
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon-div2 {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    padding-top: 10px;
+}
+
+.icon-div2>span {
+    margin: 0px 10px;
+}
+
+.icon-div2>span>a {
+    color: white;
+    text-decoration: none;
+}
+
+.text-logo2 {
+    margin-left: 16px;
+}
+
+.text-logo2>p {
+    line-height: 1.25rem;
+}
+
+.text-logo2>.nama-kelurahan {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo-kelurahan2 {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+}
+
+.logo-kelurahan2>img {
+    width: 40px;
+}
+
+.info-kontak2>ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.info-kontak2>ul>li {
+    line-height: 1rem;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.info-kontak2>ul>.notelp {
+    margin-top: 12px;
+}
+
+.info-kontak2>ul>.email {
+    margin-top: 12px;
+}
+
+.info-kontak2>ul>li>.info-desc {
+    margin-left: 8px;
+}
+
+.subfoot3>h4 {
+    margin-bottom: 10px;
+}
+
+.peta>iframe {
+    width: 350px;
+    height: 200px;
+}
+
+.copyright {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(59, 115, 255);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright>p {
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+    .berita-terkini {
+        padding: 32px 80px 48px 80px;
+    }
+
+    .card-image {
+        height: 40%;
+    }
+
+    .card-body {
+        height: 60%;
+    }
+
+    .profil-container {
+        padding: 40px 80px;
+    }
+
+    .profilcard-container {
+        padding: 10px 20px 10px 0px;
+    }
+
+    .pdf-container>a {
+        padding-left: 10px;
+    }
+
+    .links>i {
+        font-size: 24px;
+    }
+
+    .links>a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    .socialbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 5px 10px;
+        border: 2px solid grey;
+        border-radius: 10px;
+    }
+
+    .hamburger>i {
+        font-size: 24px;
+    }
+
+    .hamburger.active {
+        background-color: rgb(59, 115, 255);
+        color: white;
+        border: 2px solid white;
+    }
+
+    .info-kontak {
+        display: none;
+    }
+
+    .navbar {
+        height: 80px;
+    }
+
+    .nav-info {
+        height: 80px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+        padding: 0 20px;
+    }
+
+    .logo-kelurahan {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-kelurahan>img {
+        width: 30px;
+    }
+
+    .text-logo {
+        margin-left: 16px;
+    }
+
+    .text-logo>p {
+        line-height: 1rem;
+        font-size: 12px;
+    }
+
+    .text-logo>.nama-kelurahan {
+        font-size: 14px;
+    }
+
+    .navigator {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .navigator.active {
+        height: auto;
+    }
+
+    .navigator>ul {
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .navigator>ul>a {
+        padding: 20px 0px;
+        margin: 0;
+        border-top: 2px solid rgb(190, 190, 190);
+        color: black;
+    }
+
+    .layanan-warga {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .layanan-desc {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .profil-info {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        background-color: white;
+        box-shadow: 0 0 0;
+        z-index: 1;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: none;
+        visibility: hidden;
+    }
+
+    .dropdown-menu.active {
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        border-top: 2px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-menu li {
+        padding: 16px 16px;
+    }
+
+    .dropdown-menu li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: #ddd;
+    }
+
+    .profil-dropdown-menu {
+        top: 0;
+        left: 0;
+    }
+
+    .info-dropdown-menu {
+        top: 0;
+        left: 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .card-body {
+        height: auto;
+    }
+
+    .card-text>p {
+        margin-bottom: 20px;
+    }
+
+    .profil-container {
+        flex-direction: column;
+    }
+
+    .profilcard-container {
+        padding: 10px;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .peraturan-container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .others {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-gallery {
+        width: 80%;
+        height: 55vh;
+    }
+
+    .subtitles {
+        width: 100%;
+        text-align: center;
+    }
+
+    .link-terkait {
+        width: 80%;
+        padding: 0px 0px 40px 0px;
+    }
+
+    .footer {
+        height: 70%;
+    }
+
+    .overlay {
+        flex-direction: column;
+    }
+
+    .subfoot1,
+    .subfoot2,
+    .subfoot3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-div2 {
+        margin-right: 0;
+    }
+
+    .copyright>p {
+        letter-spacing: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .layanan-warga>img {
+        height: 200px;
+        width: 70%;
+    }
+
+    .berita-subheader {
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .berita-subheader>a {
+        padding-top: 10px;
+        font-weight: 600;
+        text-decoration: underline;
+        font-size: 16px;
+    }
+
+    .berita-terkini {
+        padding: 32px 40px 48px 40px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-text>h1 {
+        font-size: 18px;
+    }
+
+    .card-text>p {
+        font-size: 13px;
+        line-height: 1.1rem;
+    }
+
+    .profil-container {
+        padding: 40px 40px;
+    }
+
+    .profilcard-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, auto);
+    }
+
+    .mySwiper2 {
+        height: 40vh;
+    }
+
+    .subtitles {
+        padding: 10px 10px 30px 10px;
+    }
+
+    .link-terkait {
+        width: 100%;
+    }
+
+
+    .peta>iframe {
+        width: 250px;
+        height: 150px;
+    }
+
+    .footer {
+        height: 90%;
+    }
+
+    .overlay {
+        flex-direction: column;
+    }
+}
+
+/* Layanan CSS */
+
+.content {
+    padding: 0 15%;
+    display: flex;
+}
+
+.main-container {
+    width: 65%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.main-container>h1 {
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 5px solid rgb(59, 115, 255);
+}
+
+.side-content {
+    width: 35%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 95px;
+}
+
+.layanan-card {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin: 20px 0px;
+    padding: 20px;
+    display: flex;
+}
+
+.layanan-img>img {
+    width: 180px;
+    height: 180px;
+    background-color: rgb(216, 247, 249);
+    border-radius: 12px;
+}
+
+.layanancard-desc {
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+    color: black;
+}
+
+.layanancard-desc>p {
+    margin-top: 15px;
+    font-weight: 500;
+    line-height: 1.35rem;
+}
+
+.layanancard-desc>button {
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    border: 0;
+    background-color: rgb(59, 115, 255);
+}
+
+.layanancard-desc>button:hover {
+    background-color: rgb(95, 140, 222);
+    cursor: pointer;
+}
+
+.layanancard-desc>button>a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.side-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin: 20px 0px;
+}
+
+.side-card>h2 {
+    padding: 15px 0px 15px 20px;
+    border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+.side-card>a {
+    display: flex;
+    line-height: 40px;
+    padding-left: 20px;
+    border-top: 2px solid rgb(228, 228, 228);
+    text-decoration: none;
+}
+
+.side-card>a:hover {
+    text-decoration: underline;
+}
+
+.side-card>.links>i {
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        padding: 0 10%;
+    }
+
+    .layanan-card>img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .layanancard-desc>p {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .layanancard-desc>button {
+        margin-top: 5px;
+        padding: 8px 15px;
+    }
+
+    .layanancard-desc>button>a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 991px) {
+    .content {
+        padding: 0 5%;
+        flex-direction: column;
+    }
+
+    .main-container {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .side-content {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .layanan-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .layanan-img {
+        width: 100%;
+        background-color: rgb(216, 247, 249);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .layanan-img>img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .layanancard-desc {
+        margin-left: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .layanancard-desc>p {
+        margin-top: 15px;
+        font-weight: 500;
+        line-height: 1.35rem;
+    }
+
+    .layanancard-desc>button {
+        margin-top: 15px;
+        border-radius: 10px;
+        padding: 10px 30px;
+        border: 0;
+        background-color: rgb(59, 115, 255);
+    }
+
+    .layanancard-desc>button:hover {
+        background-color: rgb(95, 140, 222);
+        cursor: pointer;
+    }
+
+    .layanancard-desc>button>a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+}
+
+/* Berita CSS */
+
+.berita-card {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin: 20px 0px;
+    padding: 20px;
+    display: flex;
+}
+
+.berita-card>img {
+    width: 300px;
+    height: 120px;
+    object-fit: cover;
+    background-color: rgb(216, 247, 249);
+    border-radius: 12px;
+}
+
+.berita-desc {
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+    color: black;
+}
+
+.berita-desc>a {
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.berita-desc>p {
+    margin-bottom: 10px;
+}
+
+.berita-desc>h3 {
+    color: rgb(96, 96, 96);
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.berita-desc>a:hover {
+    text-decoration: underline;
+}
+
+.berita-mini {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}
+
+.berita-mini>img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.berita-miniheader>p {
+    padding-bottom: 5px;
+    color: rgb(171, 171, 171);
+}
+
+.berita-miniheader>a {
+    color: black;
+    text-decoration: none;
+}
+
+.berita-miniheader>a:hover {
+    text-decoration: underline;
+}
+
+.berita-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin: 20px 0px;
+}
+
+.berita-content {
+    padding: 0 10%;
+    display: flex;
+}
+
+.berita-page {
+    width: 65%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.berita-side {
+    width: 35%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.berita-container {
+    padding: 20px;
+}
+
+.berita-container>h1 {
+    font-size: 36px;
+    margin: 20px 0px;
+}
+
+.berita-container>img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.berita-container>h2 {
+    margin: 20px 0px;
+}
+
+.isi-berita {
+    font-size: 16px;
+    line-height: 1.25rem;
+}
+
+@media (max-width: 991px) {
+    .berita-content {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .berita-page {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .berita-side {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin-top: 0px;
+    }
+
+    .berita-card {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .berita-card>img {
+        width: 100%;
+    }
+
+    .berita-container {
+        padding: 30px;
+    }
+
+    .berita-container>h1 {
+        font-size: 21px;
+    }
+
+    .berita-container>img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .berita-desc {
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .berita-container>h2 {
+        font-size: 18px;
+    }
+
+    .isi-berita {
+        font-size: 14px;
+        line-height: 1.25rem;
+    }
+
+}
+
+/* Profil CSS */
+
+.profil-content {
+    padding: 0 10%;
+    display: flex;
+}
+
+.profil-page {
+    width: 65%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.profil-page>h1 {
+    padding-left: 20px;
+    border-left: 5px solid rgb(59, 115, 255);
+}
+
+.info-container {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin: 20px 0px;
+    padding: 20px;
+}
+
+.info-container>h1 {
+    font-size: 36px;
+    margin: 0px 0px 20px 0px;
+}
+
+.info-container>img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.info-container>h2 {
+    margin: 20px 0px;
+}
+
+.isi-info {
+    font-size: 16px;
+    line-height: 1.25rem;
+}
+
+.profil-side {
+    width: 35%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 85px;
+}
+
+@media (max-width: 991px) {
+    .profil-content {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .profil-page {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .profil-side {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin-top: 0px;
+    }
+
+    .profil-card {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .profil-card>img {
+        width: 100%;
+    }
+
+    .info-container {
+        padding: 30px;
+    }
+
+    .info-container>h1 {
+        font-size: 21px;
+    }
+
+    .info-container>img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .profil-desc {
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .info-container>h2 {
+        font-size: 18px;
+    }
+
+    .isi-info {
+        font-size: 14px;
+        line-height: 1.25rem;
+    }
+
+}
+
+/* Peraturan CSS */
+
+.peraturan-div {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin: 20px 0px;
+}
+
+.peraturan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+.peraturan:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+.peraturan>button {
+    height: 30px;
+    padding: 0 20px;
+    margin-right: 20px;
+    background-color: rgb(59, 115, 255);
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.peraturan>.pdf-link {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border: 0;
+}
+
+.peraturan>.pdf-link:hover {
+    background-color: transparent;
+}
